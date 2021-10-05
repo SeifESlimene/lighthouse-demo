@@ -9,7 +9,7 @@ pipeline {
 		}
 		stage("Lighthouse") {
 			environment {
-				LHCI_GITHUB_TOKEN = ‘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’
+				LHCI_GITHUB_TOKEN = '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'
 			}
 			steps {
 				sh '''#!/bin/bash
