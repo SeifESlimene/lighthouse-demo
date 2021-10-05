@@ -1,6 +1,12 @@
 pipeline {
 	agent any
 	stages {
+		stage('delete files from workspace') {
+			steps {
+				sh "ls -l"
+				sh "sudo rm -rf /var/www/dev-shoptounsi/*"
+			}
+		}
 		stage("Build") {
 			steps {
 				sh "sudo npm install"
@@ -12,10 +18,8 @@ pipeline {
 				LHCI_GITHUB_TOKEN = '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'
 			}
 			steps {
-				sh '''#!/bin/bash
-					./machine-setup
-					./job
-				'''
+				sh "./machine-setup"
+				sh "./job"
 			}
 		}
 		stage("Deploy") {
