@@ -1,12 +1,6 @@
 pipeline {
 	agent any
 	stages {
-		stage('delete files from workspace') {
-			steps {
-				sh "ls -l"
-				sh "sudo rm -rf /var/www/dev-shoptounsi/*"
-			}
-		}
 		stage("Build") {
 			steps {
 				sh "sudo npm install"
