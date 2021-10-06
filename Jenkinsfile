@@ -13,6 +13,9 @@ pipeline {
 					echo 'groups: '
 					groups
 
+					echo 'list groups: '
+					grep $(whoami) /etc/group
+
 					echo 'ENV:'
 					env
 				'''
