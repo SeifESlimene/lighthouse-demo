@@ -3,7 +3,19 @@ pipeline {
 	stages {
 		stage("Build") {
 			steps {
-				sh "whoami"
+				sh '''#!/bin/bash
+					echo 'pwd:'
+					pwd
+
+					echo 'whoami: '
+					whoami
+
+					echo 'groups: '
+					groups
+
+					echo 'ENV:'
+					env
+				'''
 				sh "sudo npm install"
 				sh "sudo npm run build"
 			}
