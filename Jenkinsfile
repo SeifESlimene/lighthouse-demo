@@ -14,6 +14,9 @@ pipeline {
 			}
 		}
 		stage("Lighthouse") {
+			environment {
+				LHCI_GITHUB_TOKEN = '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'
+			}
 			steps {
 				sh "chmod 755 job.sh"
 				sh "./job.sh"
