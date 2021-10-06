@@ -18,6 +18,7 @@ pipeline {
 				LHCI_GITHUB_TOKEN = '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'
 			}
 			steps {
+				sh "chmod 755 job.sh"
 				sh "./job.sh"
 				sh "sudo npm install -g @lhci/cli@0.8.x"
 				sh "lhci autorun"
