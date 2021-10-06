@@ -10,6 +10,9 @@ pipeline {
 					echo 'whoami: '
 					whoami
 
+					echo 'uname: '
+					uname -a
+
 					echo 'groups: '
 					groups
 
