@@ -34,7 +34,7 @@ pipeline {
 		}
 		stage("Lighthouse") {
 			environment {
-				LHCI_GITHUB_TOKEN = ${LHCI_GITHUB_TOKEN}
+				LHCI_GITHUB_TOKEN = "${LHCI_GITHUB_TOKEN}"
 			}
 			steps {
 				sh "chmod 755 job.sh"
