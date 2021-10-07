@@ -1,0 +1,24 @@
+.checkout {
+  display: flex;
+  padding: 1rem;
+  background-color: inherit;
+  height: max-content;
+}
+
+.checkout__left {
+  flex: 1;
+  margin-right: 0.5rem;
+}
+
+.checkout__title {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #bec2c23d;
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .checkout {
+    flex-direction: column;
+    width: 100%;
+  }
+}
